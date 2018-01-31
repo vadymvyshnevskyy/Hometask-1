@@ -8,16 +8,16 @@ def rec(n, m):
     :param n: int, 5
     :param m: int, 6
     :return: int, 20515
-    """
 
+    """
     if n == 0:
         return 0
     elif n < 0 or m < 0:
         return "Enter only positive numbers, please!"
-    return n**m + rec(n-1, m)
+    return n**m + rec(n - 1, m)
 
 
 try:
     print(rec(int(input()), int(input())))
-except ValueError:
+except:
     print("Enter only positive integers numbers, please!")

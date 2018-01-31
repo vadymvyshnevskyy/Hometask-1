@@ -16,8 +16,7 @@ def res(a, c, tch):
     """
     Search for side of square
     """
-    res = c / (1  + c / (a * a - c * c / 4) ** 0.5)
-
+    res = c * (a * a - c * c / 4) ** 0.5 / ((a * a - c * c / 4) ** 0.5  + c )
     return res
 
 

@@ -58,4 +58,4 @@ def films_year(year):
     write_films(cont)
 
 
-films_year(2015)
+films_year(int(input()))

@@ -1,4 +1,3 @@
-# import timeit
 # This function takes two positive integers n and m and returns the largest
 # common divisor for these numbers based on the dependence
 # F (n, m) = F (n-m, m)
@@ -13,6 +12,7 @@ def gcd(a, b):
 
     :param a: str, a
     :return: str, Enter only positive integers numbers, please!
+
     """
     if a < 0 or b < 0:
         return "Enter only positive numbers, please!"
