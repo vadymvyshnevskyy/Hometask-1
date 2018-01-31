@@ -73,7 +73,7 @@ def write_films_id(films_id):
 
     Write films id and person id to file
     """
-    with open("result.txt", "w") as file:
+    with open("n6_result.txt", "w") as file:
         for element in films_id:
             file.write(str(element))
             file.write("\n")

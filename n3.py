@@ -18,11 +18,9 @@ def country_dict(lines_list, year):
     """
     res = {}
     for i in lines_list:
-        if str("("+str(year)+")") in i:
-            if i.split()[-1] in res:
-                res[i.split()[-1]].append(i.split()[:-1])
-            else:
-                res[i.split()[-1]] = [i.split()[:-1]]
+        if "("+str(year) in i:
+            country = i.split()[-1]
+            res[country] = res.get(country, []).append(i.split()[:-1])
     return res
 
 
@@ -42,7 +40,7 @@ def write_films(film_list):
     (list) -> None
     Write country and number of films to file
     """
-    with open("result.txt", "w") as file:
+    with open("n3_result.txt", "w") as file:
         for i in film_list:
             file.write(str(i))
             file.write("\n")
