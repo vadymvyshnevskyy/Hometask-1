@@ -6,7 +6,7 @@ def read_file(path):
     """
     starts = ["NOVL:", "BOOK:", "ADPT"]
     res = []
-    with open(path, "r", encoding = "utf-8") as file:
+    with open(path, "r", encoding="utf-8", errors='ignore') as file:
         for i in file:
             for start in starts:
                 if i.startswith(start):
