@@ -1,7 +1,7 @@
 def read_file(path):
     """
     (str) -> list
-    Return list of lines from file taht start with key symbols
+    Return list of lines from file that start with key symbols
     'BOOK:', 'NOVL:', 'ADPT:'
     """
     starts = ["NOVL:", "BOOK:", "ADPT"]
@@ -55,4 +55,4 @@ def find_literature(n):
     write_author(authors_set)
 
 
-find_literature(int(input()))
+find_literature(int(input('Enter a number:',)))
