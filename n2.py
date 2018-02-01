@@ -2,7 +2,13 @@ import math
 
 
 def input_inf():
+    '''
+    Input information about amount of chocolates, radius of box
+    and the accuracy of the calculations
+    '''
+    # check the input
     try:
+        # create variables and ask user to input required information
         n = int(input("Input amount of chocolates: "))
         r = int(input("Input radius of box: "))
         tch = float(input("Input the accuracy of the calculations: "))
@@ -21,20 +27,32 @@ def input_inf():
 
 
 def cycle_len(r):
+    '''
+    Count a length of a cycle
+    '''
     return 2 * math.pi * r
 
 
 def cycle_area(r):
+    '''
+    Count an area of a cycle
+    '''
     return math.pi * r * r
 
 
 def write_file(lst):
+    '''
+    Write the result to file
+    '''
     with open("result.txt", "w") as file:
         for i in lst:
             file.write(str(i + "\n"))
 
 
 def check(r, tch, l, s1, s2):
+    '''
+    Check whether the band matches all the requirements
+    '''
     print(type(s1))
     if cycle_len(r) - l * 1.17 <= tch and s1 - cycle_area(r) <= tch \
             and s2 - cycle_area(r) <= tch:
@@ -51,6 +69,7 @@ def main_program():
     for i in range(n):
         if check(r, tch, l[i], s1[i], s2[i]):
             res.append((l[i], s1[i], s2[i]))
+    # print and write in file the result
     print (res)
     write_file(res)
 
