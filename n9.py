@@ -1,6 +1,7 @@
 # This function takes two positive integers n and m and returns the largest
 # common divisor for these numbers based on the dependence
 # F (n, m) = F (n-m, m)
+import sys
 
 
 def gcd(a, b):
@@ -15,6 +16,7 @@ def gcd(a, b):
 
 
 try:
+    sys.setrecursionlimit(1000000)
     a = int(input("Enter a positive integer: ",))
     b = int(input("Enter another positive integer: ",))
     if a < 0 or b < 0:

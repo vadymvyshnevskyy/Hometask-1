@@ -1,5 +1,6 @@
 # This function takes two positive numbers n and m and returns the sum
 # of the range 1 ^ m + 2 ^ m + ... + n ^ m.
+import sys
 
 
 def rec(n, m):
@@ -16,6 +17,7 @@ def rec(n, m):
 
 # check the input
 try:
+    sys.setrecursionlimit(1000000)
     n = int(input('Enter a positive integer: '))
     m = int(input('Enter another positive integer: '))
     if n < 0 or m < 0:
@@ -24,4 +26,3 @@ try:
         print('The sum of the range is: ', rec(n, m))
 except:
     print("Error! Enter valid value")
-

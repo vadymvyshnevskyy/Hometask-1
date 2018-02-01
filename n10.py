@@ -1,6 +1,7 @@
 # This function takes a string of characters and returns a list of two numbers
 # in which the first number is the number of capital letters per line
 # and the second is the number of lowercase letters per line.
+import sys
 
 
 def recursion(string):
@@ -20,6 +21,7 @@ def recursion(string):
         return [res[0] + 1, res[1]]
     return res
 
-capital, small = recursion(input("Enter some text:",))
+sys.setrecursionlimit(1000000)
+capital, small = recursion(input("Enter some text: "))
 print("The number of capital letters is %s; \
       The number of small letters is %s" % (capital, small))

@@ -83,7 +83,7 @@ def find_directors_id(flag='directors'):
     """
     (str) -> None
     """
-    file = read_file("data.tsv")
+    file = read_file("data1.tsv")
     role_dictionary = directors_dict(file, flag)
     maximum_list = directors_max(role_dictionary)
     write_films_id(maximum_list)

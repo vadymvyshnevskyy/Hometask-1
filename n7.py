@@ -1,5 +1,6 @@
 # The function takes the integer positive number n and returns the square of
 # that number based on the dependence n2 = (n-1) 2 + 2 (n-1) +1.
+import sys
 
 
 def rec(n):
@@ -19,6 +20,7 @@ def rec(n):
 
 
 try:
+    sys.setrecursionlimit(1000000)
     n = int(input("Please enter positive number: "))
     if n < 0:
         print("Enter only positive numbers, please!")
