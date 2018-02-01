@@ -17,7 +17,9 @@ def input_inf():
             return 0
         l, s1, s2 = [], [], []
         for i in range(n):
-            a1, a2, a3 = map(int, input("Input info: ").split())
+            a1, a2, a3 = map(int, input("Enter Triples of value:\n \
+Length of rope, Area of first chocolate bar, \
+Area of second chocolate bar: ").split())
             l.append(a1)
             s1.append(a2)
             s2.append(a3)
