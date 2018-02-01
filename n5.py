@@ -56,7 +56,7 @@ def write_films_id(set_films_id):
     :param set_films_id:
     :return:
     """
-    with open("result.txt", "w") as file:
+    with open("n5_result.txt", "w") as file:
         for films in set_films_id:
             file.write(films + "\n")
 
@@ -75,5 +75,9 @@ def find_films_id(n, num_v):
     write_films_id(set_films_id)
     print("Done!")
 
-    
-find_films_id(10, 120)
+try:
+    n = int(input("Enter number of films: "))
+    votes_number = int(input("Enter minimal number of votes: "))
+    find_films_id(n, votes_number)
+except:
+    print("Wrong input!")
