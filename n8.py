@@ -12,12 +12,15 @@ def rec(n, m):
     """
     if n == 0:
         return 0
+    # check the input
     elif n < 0 or m < 0:
         return "Enter only positive numbers, please!"
     return n**m + rec(n - 1, m)
 
 
 try:
-    print(rec(int(input()), int(input())))
+    print('The sum of the range is:',
+          rec(int(input('Enter a positive integer:',)),
+              int(input('Enter another positive integer:',))))
 except:
     print("Enter only positive integers numbers, please!")
