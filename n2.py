@@ -46,7 +46,7 @@ def write_file(lst):
     '''
     with open("result.txt", "w") as file:
         for i in lst:
-            file.write(str(i + "\n"))
+            file.write(str(i) + "\n")
 
 
 def check(r, tch, l, s1, s2):
