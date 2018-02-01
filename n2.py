@@ -53,7 +53,6 @@ def check(r, tch, l, s1, s2):
     '''
     Check whether the band matches all the requirements
     '''
-    print(type(s1))
     if cycle_len(r) - l * 1.17 <= tch and s1 - cycle_area(r) <= tch \
             and s2 - cycle_area(r) <= tch:
         return True
@@ -63,14 +62,11 @@ def check(r, tch, l, s1, s2):
 
 def main_program():
     n, r, tch, l, s1, s2 = input_inf()
-    print(s1)
-    print(s2)
     res = []
     for i in range(n):
         if check(r, tch, l[i], s1[i], s2[i]):
             res.append((l[i], s1[i], s2[i]))
-    # print and write in file the result
-    print (res)
+    # write in file the result
     write_file(res)
 
 
