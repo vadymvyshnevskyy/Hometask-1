@@ -4,7 +4,7 @@ def read_file(path):
     Return set of lines from file.
 
     :param path:
-    :return: 
+    :return:
     """
     result = set()
     with open(path, "r") as file:
@@ -40,8 +40,10 @@ def films_id(n, votes_dict):
     :param votes_dict:
     :return:
     """
+    # create a list of films and sort it
     lst_of_film = [(vote, votes_dict[vote]) for vote in votes_dict]
     lst_of_film = sorted(lst_of_film, key=lambda i: i[1], reverse=True)
+    # use the lst_of_film for result set
     result = {lst_of_film[i][0] for i in range(n)}
     return result
 
@@ -73,5 +75,5 @@ def find_films_id(n, num_v):
     write_films_id(set_films_id)
     print("Done!")
 
-
+    
 find_films_id(10, 120)
