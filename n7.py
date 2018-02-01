@@ -14,13 +14,15 @@ def rec(n):
 
     if n == 0:
         return 0
-    elif n < 0:
-        return "Enter only positive numbers, please!"
     else:
-        return rec(n-1)+2*(n-1)+1
+        return rec(n - 1) + 2 * (n - 1) + 1
 
 
 try:
-    print(rec(int(input())))
-except ValueError:
-    print("Enter only positive integers numbers, please!")
+    n = int(input("Please enter positive number: "))
+    if n < 0:
+        print("Enter only positive numbers, please!")
+    else:
+        print("The square of {} is {}".format(n, rec(n)))
+except:
+    print("Wrong input")
