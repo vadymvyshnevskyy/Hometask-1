@@ -2,14 +2,21 @@ def input_info():
     """
     Input info aboat triangle
     """
-    a, b, c, tch = map(float, input("Input info: ").split())
+    a, b, c, tch = map(float, input(
+        "Enter length of sides of triangle and accuracy (1 2 3 4): ").split())
     # search for similar sides of triangle
+    if a + b <= c or b + c <= a or c + a <= b:
+        print("Wrong sides of the triangle!")
+        return 0
     if a == b:
         return a, c, tch
     if a == c:
         return a, b, tch
     if c == b:
         return b, a, tch
+    else:
+        print("The triangle is not equidistant!")
+        return 0
 
 
 def res(a, c, tch):
@@ -34,4 +41,7 @@ def main_program():
     write_file(result)
 
 
-main_program()
+try:
+    main_program()
+except:
+    print("Wrong input!")

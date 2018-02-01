@@ -15,9 +15,9 @@ def input_inf():
         return 0
     l, s1, s2 = [], [], []
     for i in range(n):
-        a1, a2, a3 = map(int, input("Enter Triples of value:\n \
+        a1, a2, a3 = map(int, input("Enter Triples of value:\n\
 Length of rope, Area of first chocolate bar, \
-Area of second chocolate bar: ").split())
+Area of second chocolate bar (1 2 3): ").split())
         l.append(a1)
         s1.append(a2)
         s2.append(a3)
@@ -42,7 +42,7 @@ def write_file(lst):
     '''
     Write the result to file
     '''
-    with open("result.txt", "w") as file:
+    with open("n2_result.txt", "w") as file:
         for i in lst:
             file.write(str(i) + "\n")
 
@@ -61,16 +61,14 @@ def check(r, tch, l, s1, s2):
 def main_program():
     try:
         n, r, tch, l, s1, s2 = input_inf()
-        print(s1)
-        print(s2)
         res = []
         for i in range(n):
             if check(r, tch, l[i], s1[i], s2[i]):
                 res.append((l[i], s1[i], s2[i]))
         # print and write in file the result
-        print (res)
         write_file(res)
     except:
         print("Wrong input!")
+
 
 main_program()
