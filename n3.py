@@ -6,6 +6,7 @@ def read_file(path):
     res = []
     with open(path, "r") as file:
         for i in file:
+            # check whether line starts with bracket
             if i.startswith('"'):
                 res.append(i.strip())
     return res
@@ -56,4 +57,4 @@ def films_year(year):
     write_films(cont)
 
 
-films_year(int(input()))
+films_year(int(input("Enter a year's number:",)))
