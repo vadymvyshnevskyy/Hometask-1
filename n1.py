@@ -35,6 +35,11 @@ def write_file(res):
 
 
 def main_program():
+    """
+    This function takes info about equilateral triangle and search side 
+    of the bigest square that can be write in this triangle.
+    Results are written to the file.
+    """
     a, b, tch = input_info()
     result = res(a, b, tch)
     print(result)
