@@ -5,14 +5,11 @@
 
 def gcd(a, b):
     """
-
     :param a: int, 126
     :param b: int, 4
     :return: int, 2
-
     :param a: str, a
     :return: str, Enter only positive integers numbers, please!
-
     """
     if a < 0 or b < 0:
         return "Enter only positive numbers, please!"
@@ -20,6 +17,8 @@ def gcd(a, b):
 
 
 try:
-    print(gcd(int(input()), int(input())))
+    print("The largest common divisor is:",
+          gcd(int(input("Enter a positive integer:",)),
+              int(input("Enter another positive integer:",))))
 except ValueError:
     print("Enter only positive integers numbers, please!")
